@@ -1,4 +1,5 @@
 #!/bin/bash -e
+<<<<<<< HEAD
 . ./.env.sh
 export COMPONENT_PARAM_HOST=localhost
 case "$(uname -s)" in
@@ -10,4 +11,7 @@ case "$(uname -s)" in
      ;;
 esac
 export COMPONENT_PARAM_AUTH_HOST=${COMPONENT_PARAM_HOST}
+=======
+export $(cat ./.env | grep -v ^# | xargs)
+>>>>>>> 2cd809d0a5c3c93b60ee965100c35256fd6a8d2c
 ng serve --host=${COMPONENT_PARAM_LSTN} --port=${COMPONENT_PARAM_PORT}

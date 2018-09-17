@@ -1,4 +1,3 @@
 #!/bin/bash -e
-. ./.env.sh
-npm i
+export $(cat ./.env | grep -v ^# | xargs)
 ng build
