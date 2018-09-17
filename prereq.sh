@@ -2,7 +2,7 @@
 
 export $(cat ./.env | grep -v ^# | xargs)
 
-pushd static/client
+pushd static/html
 ./prereq.sh
 popd
 

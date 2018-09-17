@@ -1,6 +1,6 @@
 #!/bin/bash -e
 
-pushd static/client
+pushd static/html
 ./build.sh
 popd
 

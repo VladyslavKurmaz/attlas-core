@@ -1,8 +1,8 @@
 #!/bin/bash -e
 
-pushd static/client
+pushd static/html
 ./lint.sh
-#./test.sh
+./test.sh
 popd
 
 pushd services/auth
