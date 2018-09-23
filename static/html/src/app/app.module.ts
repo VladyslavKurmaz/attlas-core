@@ -19,6 +19,7 @@ import { DocsComponent } from './pages/docs/docs.component';
 import { SettingsComponent } from './pages/settings/settings.component';
 import { HudComponent } from './pages/hud/hud.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { AuthProvidersComponent } from './components/auth-providers/auth-providers.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     DocsComponent,
     SettingsComponent,
     HudComponent,
-    NavbarComponent
+    NavbarComponent,
+    AuthProvidersComponent
   ],
   imports: [
     BrowserModule,
