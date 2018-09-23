@@ -3,9 +3,9 @@ import { HttpClient, HttpHeaders, HttpResponse, HttpParams } from '@angular/comm
 import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 
-//import { environment } from './../../environments/environment';
+// import { environment } from './../../environments/environment';
 
-//import { BindService } from './../services/bind.service';
+// import { BindService } from './../services/bind.service';
 
 @Component({
   selector: 'app-home',

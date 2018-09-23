@@ -3,7 +3,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 
 import { HomeComponent } from './home.component';
 import { HttpClient, HttpHandler } from '@angular/common/http';
-//import { BindService } from '../services/bind.service';
+// import { BindService } from '../services/bind.service';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;

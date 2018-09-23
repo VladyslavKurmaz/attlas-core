@@ -29,9 +29,7 @@ export class NavbarComponent implements OnInit {
   }
 
   activateRouteItem(item: NavbarRouteItem) {
-    this.router.navigate(['/'+item.id]);
+    this.router.navigate(['/' + item.id]);
   }
-
-  
 
 }

@@ -8,6 +8,11 @@
         "cordova build android"
       ]
     },
+    "prereq":{
+      "shell":[
+        "cordova platform add android"
+      ]
+    },
     "install":{
       "shell":[
         "export $(cat ./../../.env | grep -v ^# | xargs)",

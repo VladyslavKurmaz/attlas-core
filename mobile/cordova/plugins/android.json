@@ -8,7 +8,7 @@
   },
   "installed_plugins": {
     "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "com.attlas.android"
+      "PACKAGE_NAME": "com.attlas.mobile.client"
     }
   },
   "dependent_plugins": {}
