@@ -3,7 +3,7 @@
     <img src="assets/imgs/logo.png" class="d-inline-block align-top navbar__logo">
   </a>
   <nav class="nav p-1">
-    <a class="p-1" *ngFor="let item of routeItems" (click)="activateRouteItem(item)"[ngClass]="[isCurrentPage(item) ? 'border-bottom border-warning' : '', item.group?'ml-2 pl-2':'']">
+    <a class="border-bottom p-1" *ngFor="let item of routeItems" (click)="activateRouteItem(item)"[ngClass]="[isCurrentPage(item) ? 'border-warning' : 'border-light', item.group?'ml-2 pl-2':'']">
       <img [attr.src]="'assets/imgs/icons/'+item.id+'.png'" class="d-inline-block align-top navbar__icon">
     </a>
   </nav>

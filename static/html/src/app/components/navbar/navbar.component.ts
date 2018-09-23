@@ -22,6 +22,7 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log(localStorage);
   }
 
   isCurrentPage(item: NavbarRouteItem): boolean {

@@ -8,6 +8,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { Routing } from './app.routing';
 
+import { AuthGuardService } from './services/auth-guard.service';
+
 import { HomeComponent } from './pages/home/home.component';
 import { BindComponent } from './pages/bind/bind.component';
 import { ContactsComponent } from './pages/contacts/contacts.component';
@@ -17,7 +19,6 @@ import { DocsComponent } from './pages/docs/docs.component';
 import { SettingsComponent } from './pages/settings/settings.component';
 import { HudComponent } from './pages/hud/hud.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-
 
 @NgModule({
   declarations: [
@@ -39,7 +40,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     Routing,
     NgbModule
   ],
-  providers: [],
+  providers: [
+    AuthGuardService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
