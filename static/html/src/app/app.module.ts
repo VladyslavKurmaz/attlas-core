@@ -9,12 +9,28 @@ import { AppComponent } from './app.component';
 import { Routing } from './app.routing';
 
 import { HomeComponent } from './pages/home/home.component';
+import { BindComponent } from './pages/bind/bind.component';
+import { ContactsComponent } from './pages/contacts/contacts.component';
+import { GoalsComponent } from './pages/goals/goals.component';
+import { FlowsComponent } from './pages/flows/flows.component';
+import { DocsComponent } from './pages/docs/docs.component';
+import { SettingsComponent } from './pages/settings/settings.component';
+import { HudComponent } from './pages/hud/hud.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    BindComponent,
+    ContactsComponent,
+    GoalsComponent,
+    FlowsComponent,
+    DocsComponent,
+    SettingsComponent,
+    HudComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
