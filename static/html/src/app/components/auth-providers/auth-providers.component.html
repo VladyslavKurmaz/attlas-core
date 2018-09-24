@@ -1,3 +1,13 @@
-<p>
-  auth-providers works!
-</p>
+<div class="container pt-4 border-top">
+  <div class="row" *ngIf="providers.length > 0">
+    <div class="col-3 text-center p-0"  *ngFor="let provider of providers; let i = index">
+      <div class="">
+        <!--a class="" href="{{getProviderBindLink(provider.providerId)}}" *ngIf="i<providersToShow || expanded"-->
+        <a class="">
+          <img  class="container__provider-icon" [attr.src]="'assets/imgs/providers/' + provider.id + '.png'">
+        </a>
+      </div>
+      <div *ngIf="provider.active" class="bg-info border border-light container__provider-circle"></div>
+    </div>
+  </div>
+</div>
