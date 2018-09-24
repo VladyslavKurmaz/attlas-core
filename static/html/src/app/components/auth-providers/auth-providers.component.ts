@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { Contact } from './../../models/contacts';
+import { AuthProvider } from './../../models/auth-provider';
 
 @Component({
   selector: 'app-auth-providers',
@@ -9,7 +9,7 @@ import { Contact } from './../../models/contacts';
 })
 export class AuthProvidersComponent implements OnInit {
 
-  @Input() providers: Contact[];
+  @Input() providers: AuthProvider[];
 
   constructor() { }
 

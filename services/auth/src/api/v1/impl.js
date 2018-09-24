@@ -45,8 +45,8 @@ module.exports = function(express, app, jsv, reply, helpers) {
         }
         r.push(
           {
-            providerId: key,
-            connected: connected,
+            id: key,
+            active: connected,
             data: data
           }
         );

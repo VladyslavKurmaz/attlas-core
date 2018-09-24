@@ -5,13 +5,13 @@
 
 export const environment = {
   production: false,
-  self: 'http://localhost:9080',
+  self: 'http://192.168.1.100:9080',
   storage: {
     token: 'token'
   },
   services: {
     bind: {
-      apiUrl: 'http://localhost:9081/api/v1'
+      apiUrl: 'http://192.168.1.100:9081/api/v1'
     }
   }
 };

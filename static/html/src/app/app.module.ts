@@ -8,8 +8,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { Routing } from './app.routing';
 
-import { AuthGuardService } from './services/auth-guard.service';
-
 import { HomeComponent } from './pages/home/home.component';
 import { BindComponent } from './pages/bind/bind.component';
 import { ContactsComponent } from './pages/contacts/contacts.component';
@@ -43,7 +41,6 @@ import { AuthProvidersComponent } from './components/auth-providers/auth-provide
     NgbModule
   ],
   providers: [
-    AuthGuardService
   ],
   bootstrap: [AppComponent]
 })
