@@ -1,5 +1,5 @@
 #!/bin/bash -e
-. ./.env.sh
+export $(cat ./.env | grep -v ^# | xargs)
 case "$(uname -s)" in
    Darwin)
      export COMPONENT_PARAM_HOST=$(ipconfig getifaddr en0)

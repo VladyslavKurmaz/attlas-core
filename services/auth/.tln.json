@@ -9,33 +9,33 @@
     },
     "build":{
       "shell":[
-        ". ./.env.sh",
+        "export $(cat ./.env | grep -v ^# | xargs)",
         "npm i"
       ]
     },
     "test":{
       "shell":[
-        ". ./.env.sh",
+        "export $(cat ./.env | grep -v ^# | xargs)",
         "npm run jasmine"
       ]
     },
     "serve":{
       "shell":[
-        ". ./.env.sh",
+        "export $(cat ./.env | grep -v ^# | xargs)",
         "export COMPONENT_PARAM_HOST=$(ifconfig getifaddr en0)",
         "npm run serve"
       ]
     },
     "docker.build":{
       "shell":[
-        ". ./.env.sh",
+        "export $(cat ./.env | grep -v ^# | xargs)",
         "docker build \\",
         " -t ${COMPONENT_ID}:${COMPONENT_VERSION} ."
       ]
     },
     "docker.run":{
       "shell":[
-        ". ./.env.sh",
+        "export $(cat ./.env | grep -v ^# | xargs)",
         "docker run -d --rm \\",
         " --env-file ./.env \\",
         " -p $COMPONENT_PARAM_PORT:$COMPONENT_PARAM_PORT \\",
@@ -45,19 +45,19 @@
     },
     "docker.save":{
       "shell":[
-        ". ./.env.sh",
+        "export $(cat ./.env | grep -v ^# | xargs)",
         "docker save -o ${COMPONENT_ID}-${COMPONENT_VERSION}.tar ${COMPONENT_ID}:${COMPONENT_VERSION}"
       ]
     },
     "docker.load":{
       "shell":[
-        ". ./.env.sh",
+        "export $(cat ./.env | grep -v ^# | xargs)",
         "docker load -i ${COMPONENT_ID}-${COMPONENT_VERSION}.tar"
       ]
     },
     "docker.stop":{
       "shell":[
-        ". ./.env.sh",
+        "export $(cat ./.env | grep -v ^# | xargs)",
         "docker stop ${COMPONENT_ID}",
         "docker rmi ${COMPONENT_ID}:${COMPONENT_VERSION}"
       ]

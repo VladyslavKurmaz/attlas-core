@@ -1,4 +1,4 @@
 #!/bin/bash -e
-. ./.env.sh
+export $(cat ./.env | grep -v ^# | xargs)
 docker build \
  -t ${COMPONENT_ID}:${COMPONENT_VERSION} .
