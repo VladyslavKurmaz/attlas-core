@@ -7,6 +7,16 @@
         </div>
       </a>
       <app-auth-providers [providers]="providers"></app-auth-providers>
+      <div class="container border-top bind__sticked-bottom" *ngIf="isAuthenticated()">
+        <div class="row">
+          <div class="col-6 p-0 text-center border-right">
+            <button type="button" class="btn btn-block btn-link rounded-0"><img class="bind__button-icon" src="assets/imgs/icons/home.png" (click)="gotoHud()"></button>
+          </div>
+          <div class="col-6 p-0 text-center">
+            <button type="button" class="btn btn-block btn-link rounded-0"><img class="bind__button-icon" src="assets/imgs/icons/profile.png" (click)="gotoProfile()"></button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

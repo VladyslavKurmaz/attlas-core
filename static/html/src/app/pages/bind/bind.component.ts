@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { Contact } from './../../models/contact';
 import { AuthProvider } from './../../models/auth-provider';
@@ -12,7 +13,7 @@ import { AuthService } from './../../services/auth.service';
 export class BindComponent implements OnInit {
 
   providers: AuthProvider[] = [];
-  constructor(private auth: AuthService) { }
+  constructor(private auth: AuthService, private router: Router) { }
 
   ngOnInit() {
     this.providers = Array<AuthProvider>();
@@ -39,4 +40,15 @@ export class BindComponent implements OnInit {
     );
   }
 
+  isAuthenticated(): boolean {
+    return this.auth.isAuthenticated();
+  }
+  
+  gotoHud() {
+    this.router.navigate(['/hud']);
+  }
+
+  gotoProfile() {
+    this.router.navigate(['/settings']);
+  }
 }

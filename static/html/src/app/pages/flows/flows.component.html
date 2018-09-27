@@ -1,1 +1,29 @@
 <app-navbar></app-navbar>
+<div class="container p-0">
+  <div class="row">
+    <div class="col-12 col-lg-6 pt-2">
+      <div class="card rounded-0">
+        <div class="card-body">
+          <a href="#" class="btn btn-primary btn-block rounded-0">Improve resume</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-6 pt-2">
+      <div class="card rounded-0">
+        <div class="card-header p-2">Skyworker</div>
+        <div class="card-body">
+          <div class="media pt-3" *ngFor="let flow of flows; let i = index">
+            <img class="align-self-start mr-3 flows__flow-icon" src="assets/imgs/icons/career.png">
+            <div class="media-body">
+              <h5 class="mt-0"><button type="button" class="btn btn-link text-body">{{flow}}</button></h5>
+              <a href="#" class="btn btn-primary btn-sm rounded-0 float-right">start</a>
+              <p>With supporting text below as a natural lead-in to additional content.</p>
+            </div>
+            <hr/>
+          </div>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

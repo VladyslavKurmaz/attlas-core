@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FlowsComponent implements OnInit {
 
+  flows: string[] = [
+    "Find a mentor",
+    "Become a consultant"
+  ];
+
   constructor() { }
 
   ngOnInit() {
