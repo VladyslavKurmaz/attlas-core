@@ -3,6 +3,7 @@
 git subtree pull --prefix static/html tln-angular master --squash
 
 git subtree pull --prefix services/auth tln-nodejs master --squash
+git subtree pull --prefix services/api tln-nodejs master --squash
 git subtree pull --prefix services/correlator tln-nodejs master --squash
 
 
