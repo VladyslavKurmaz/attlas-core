@@ -12,6 +12,8 @@ pushd services/auth
 popd
 
 pushd services/api
+./docker.build.sh
+./docker.save.sh
 popd
 
 pushd services/correlator

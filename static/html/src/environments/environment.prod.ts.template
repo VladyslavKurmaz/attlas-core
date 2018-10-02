@@ -7,6 +7,9 @@ export const environment = {
   services: {
     bind: {
       apiUrl: 'http://${COMPONENT_PARAM_AUTH_HOST}:${COMPONENT_PARAM_AUTH_PORT}/api/v1'
+    },
+    api: {
+      apiUrl: 'http://${COMPONENT_PARAM_API_HOST}:${COMPONENT_PARAM_API_PORT}/api/v1'
     }
   }
 };

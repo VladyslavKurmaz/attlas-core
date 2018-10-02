@@ -11,7 +11,7 @@ pushd services/auth
 popd
 
 pushd services/api
-#./prereq.sh
+./prereq.sh
 popd
 
 pushd services/correlator

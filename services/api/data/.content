@@ -1,0 +1,22 @@
+{
+  "props": {
+    "user": {
+      "name": "VladyslavKurmaz",
+      "email": "vladislav.kurmaz@gmail.com"
+    }
+  },
+  "items": {
+    "contacts": {
+      "props": {
+        "key": "value"
+      },
+      "items": {
+        "tenants": {
+          "props": {
+            "l1":"v1"
+          }
+        }
+      }
+    }
+  }
+}

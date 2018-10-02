@@ -10,7 +10,7 @@ pushd services/auth
 popd
 
 pushd services/api
-#./test.sh
+./test.sh
 popd
 
 pushd services/correlator

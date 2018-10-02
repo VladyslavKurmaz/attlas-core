@@ -12,6 +12,9 @@ export const environment = {
   services: {
     bind: {
       apiUrl: 'http://192.168.1.100:9081/api/v1'
+    },
+    api: {
+      apiUrl: 'http://192.168.1.100:9082/api/v1'
     }
   }
 };

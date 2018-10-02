@@ -1,7 +1,23 @@
 <app-navbar></app-navbar>
-<div class="container p-0">
+<div class="container">
   <div class="row">
-    <div class="col-12 col-lg-6 pt-2">
+    <div class="col-12 col-lg-6 pt-2" *ngFor="let item of root.items | keyvalue">
+      <div class="card rounded-0">
+        <div class="card-header p-2">{{item.value.props.title}}</div>
+        <div class="card-body">
+          <div class="media pt-3" *ngFor="let flow of item.value.items.flows.items | keyvalue">
+            <img class="align-self-start mr-3 flows__flow-icon" [attr.src]="flow.value.props.icon">
+            <div class="media-body">
+              <h5 class="mt-0"><button type="button" class="btn btn-link text-body">{{flow.value.props.title}}</button></h5>
+              <p>{{flow.value.props.desc}}</p>
+              <a href="#" class="btn btn-primary btn-sm rounded-0">start</a>
+            </div>
+            <hr/>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--div class="col-12 col-lg-6 pt-2">
       <div class="card rounded-0">
         <div class="card-body">
           <a href="#" class="btn btn-primary btn-block rounded-0">Improve resume</a>
@@ -24,6 +40,6 @@
           <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
         </div>
       </div>
-    </div>
+    </div-->
   </div>
 </div>

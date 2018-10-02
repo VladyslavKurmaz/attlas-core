@@ -7,51 +7,29 @@ import { of } from 'rxjs';
 
 import { environment } from './../../environments/environment';
 
-import { Contact, ContactsResponse } from './../models/contact';
+import { Item, ItemResponse } from './../models/item';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthService {
+export class ApiService {
 
-  constructor(private http: HttpClient) {
-  }
+  constructor(private http: HttpClient) { }
 
-  getProviders(): Observable<Contact[]> {
-    localStorage.removeItem(environment.storage.token);
+  getItems(url: string): Observable<Item> {
     const options = {
       /*headers:new HttpHeaders ({
         "Content-Type": "application/json"
       }),*/
       withCredentials: true
     };
-    return this.http.get<ContactsResponse>(this.getEndpoint('/contacts'), options)
+    return this.http.get<ItemResponse>(`${environment.services.api.apiUrl}${url}`, options)
       .pipe(
         map(res => {
-          const p = res.data.find(provider => provider.active);
-          if (p) {
-            localStorage.setItem(environment.storage.token, 'authenticated');
-          }
-          console.log(res);
           return res.data;
         }),
-        catchError(this.handleError<Contact[]>('getProviders', undefined))
+        catchError(this.handleError<Item>('getItems', undefined))
       );
-  }
-
-  isAuthenticated(): boolean {
-    if (localStorage.getItem(environment.storage.token)) {
-      return true;
-    }
-    return false;
-  }
-
-  getProviderBindLink(providerId: string, redirect: string) {
-    return this.getEndpoint(`/goals/auth/${providerId}?redirect=${environment.self}${redirect}`);
-  }
-
-  private getEndpoint(endpoint: string): string {
-    return `${environment.services.bind.apiUrl}${endpoint}`;
   }
 
   private handleError<T>(operation = 'operation', result?: T) {

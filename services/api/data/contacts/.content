@@ -1,0 +1,12 @@
+{
+  "props": {
+    "param" : "data"
+  },
+  "items": {
+    "tenants": {
+      "props": {
+        "l2": "v2"
+      }
+    }
+  }
+}

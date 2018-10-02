@@ -9,7 +9,7 @@ pushd services/auth
 popd
 
 pushd services/api
-#./build.sh
+./build.sh
 popd
 
 pushd services/correlator
