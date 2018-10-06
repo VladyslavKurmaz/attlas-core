@@ -13,10 +13,20 @@ import { AuthService } from './../../services/auth.service';
 export class BindComponent implements OnInit {
 
   providers: AuthProvider[] = [];
+  loading = false;
+  error = '';
+  
   constructor(private auth: AuthService, private router: Router) { }
 
   ngOnInit() {
+    this.refreshProvidersList();
+  }
+
+  refreshProvidersList() {
     this.providers = Array<AuthProvider>();
+    this.loading = true;
+    this.error = '';
+    //
     this.auth.getProviders().subscribe(
       (v) => {
         console.log('1');
@@ -29,13 +39,11 @@ export class BindComponent implements OnInit {
         }.bind(this));
       },
       (err) => {
-        console.log('2');
-//        this.error = err;
-//        this.loading = false;
+        this.error = err;
+        this.loading = false;
       },
       () => {
-        console.log('3');
-//        this.loading = false;
+        this.loading = false;
       }
     );
   }
@@ -43,7 +51,7 @@ export class BindComponent implements OnInit {
   isAuthenticated(): boolean {
     return this.auth.isAuthenticated();
   }
-  
+
   gotoHud() {
     this.router.navigate(['/hud']);
   }

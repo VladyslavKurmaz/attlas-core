@@ -6,7 +6,12 @@
           <img class="img-fluid community-logo pt-4 pb-4" src="assets/imgs/community.png">
         </div>
       </a>
-      <app-auth-providers [providers]="providers"></app-auth-providers>
+      <app-auth-providers *ngIf="!(loading || error)" [providers]="providers"></app-auth-providers>
+      <app-loader *ngIf="loading"></app-loader>
+      <div class="alert alert-danger rounded-0 text-center" *ngIf="error" role="alert">
+        {{error}}
+        <button type="button" class="btn btn-secondary rounded-0 mt-4 d-block mx-auto" (click)="refreshProvidersList()">Try again</button>
+      </div>
       <div class="container border-top bind__sticked-bottom" *ngIf="isAuthenticated()">
         <div class="row">
           <div class="col-6 p-0 text-center border-right">

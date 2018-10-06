@@ -18,6 +18,7 @@ import { SettingsComponent } from './pages/settings/settings.component';
 import { HudComponent } from './pages/hud/hud.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AuthProvidersComponent } from './components/auth-providers/auth-providers.component';
+import { LoaderComponent } from './components/loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { AuthProvidersComponent } from './components/auth-providers/auth-provide
     SettingsComponent,
     HudComponent,
     NavbarComponent,
-    AuthProvidersComponent
+    AuthProvidersComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,

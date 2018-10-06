@@ -1,5 +1,8 @@
 <div class="container pt-4 border-top">
   <div class="row" *ngIf="providers.length > 0">
+    <!--div class="col-12 text-center">
+    Text
+    </div-->
     <div class="col-3 text-center p-0"  *ngFor="let provider of providers; let i = index">
       <div class="">
         <a class="" href="{{provider.authLink}}">
