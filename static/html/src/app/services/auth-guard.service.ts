@@ -13,6 +13,7 @@ export class AuthGuardService implements CanActivate {
 
   canActivate() {
     //
+    console.log(localStorage);
     if (localStorage.getItem(environment.storage.token)) {
       return true;
     }
